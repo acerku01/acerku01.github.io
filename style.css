@@ -4,4 +4,8 @@ html,body{
 }
 .bg{
     background: url(images/BG.jpg);
+    height: 460px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
