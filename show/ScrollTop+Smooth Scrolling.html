@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<style>
+html,body{
+  margin: 0;
+  padding: 0;
+}
+.content::after{
+  clear: both;
+}
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.5);
+  width: 100%;
+  height: 70px;
+}
+.fixed ul{
+  text-align: left;
+  margin: 0 auto 0 auto;
+  display: table;
+  padding: 0px;
+}
+.fixed ul > li {
+  text-align: center;
+  padding: 0;
+  display: table-cell;
+}
+a{
+  font-size:40px;
+  display:inline-block;
+  margin:10px;
+  color: #fff;
+  text-decoration: none;
+}
+.content > div{
+  width:100%;
+  float:left;
+  height:1000px;
+  background: #0c6353;
+  color:#fff;
+  font-size:40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#gotop{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+.content > div:nth-child(even){
+  background: rgb(6, 86, 117);
+  height: 250px;
+}
+.active a{
+  color:rgb(223, 249, 29);
+}
+
+</style>
+<body>
+    <div class="fixed scrollTop">
+        <ul>          
+            <li class="active">
+                <a class="scroll" href="#id1">slide1</a>
+            </li>
+            <li>
+                <a class="scroll" href="#id2">slide2</a>
+            </li>
+            <li>
+                <a class="scroll" href="#id3">slide3</a>
+            </li>
+            <li>
+                <a class="scroll" href="#id4">slide4</a>
+            </li>          
+        </ul>
+    </div>
+    <div class="content">
+        <div id="id1">slide1</div>
+        <div id="id2">slide2</div>
+        <div id="id3">slide3</div>
+        <div id="id4">slide4</div>
+    </div>
+    
+    <a href="#" id="gotop"><img src="images/btn_goTop.png" alt=""></a>
+<script>
+$(Document).ready(function(){
+    var scrollLink = $('.scroll');
+    // Smooth scrolling
+    scrollLink.click(function(e) {
+    e.preventDefault();
+    $('body,html').animate({
+      scrollTop: $(this.hash).offset().top
+    }, 1000 );
+    });
+
+    // gotop
+    $("#gotop").click(function(event){
+        event.preventDefault();
+		$("html,body").animate({scrollTop:0},600);
+		return false;
+    });
+    
+    // Active link switching
+    $(window).scroll(function() {
+        var scrollbarLocation = $(this).scrollTop();
+        scrollLink.each(function() {
+            var sectionOffset = $(this.hash).offset().top - 20;
+            if ( sectionOffset <= scrollbarLocation ) {
+                $(this).parent().addClass('active');
+                $(this).parent().siblings().removeClass('active');
+            }
+        })
+    })
+})
+</script>
+</body>
+</html>
