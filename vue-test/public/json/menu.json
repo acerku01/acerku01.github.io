@@ -1,0 +1,38 @@
+{
+  "data":[
+    { "url": "/#/about", 
+      "name": "About Us"
+    },
+    {
+      "url": "#",
+      "name": "Product",
+      "children": [
+        {
+          "url": "#",
+          "name": "product-item1"
+        },
+        {
+          "url": "http://google.com",
+          "name": "product-item2",
+          "target":"_blank"
+        }
+      ]
+    },
+    { 
+      "url": "/#/news",
+      "name": "News" 
+    },
+    { 
+      "url": "#",
+      "name": "Contact Us" 
+    },
+    { 
+      "url": "/#/login", 
+      "name": "Login" 
+    },
+    { 
+      "url": "/#/admin", 
+      "name": "Admin" 
+    }
+  ]
+}
