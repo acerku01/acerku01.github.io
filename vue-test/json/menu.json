@@ -1,6 +1,6 @@
 {
   "data":[
-    { "url": "/#/about", 
+    { "url": "/about", 
       "name": "About Us"
     },
     {
@@ -19,7 +19,7 @@
       ]
     },
     { 
-      "url": "/#/news",
+      "url": "/news",
       "name": "News" 
     },
     { 
@@ -27,11 +27,11 @@
       "name": "Contact Us" 
     },
     { 
-      "url": "/#/login", 
+      "url": "/login", 
       "name": "Login" 
     },
     { 
-      "url": "/#/admin", 
+      "url": "/admin", 
       "name": "Admin" 
     }
   ]

@@ -1,6 +1,6 @@
 {
   "data":[
-    { "url": "/#/about", 
+    { "url": "/about", 
       "name": "About Us"
     },
     { 
@@ -12,7 +12,7 @@
       "name": "product"
     },
     { 
-      "url": "#",
+      "url": "/news",
       "name": "News" 
     },
     { 
