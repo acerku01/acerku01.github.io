@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>口罩地圖</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css"></link> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css"></link>
+    
+</head>
+<body>
+    <div id="map"></div>
+    <div class="fix_box">
+        <div class="close_btn">
+            <img src="img/back.svg" alt="">
+        </div>
+        <div class="date_box">
+            <h2 class="jsData title">星期<span></span></h2>
+            <div class="day_info">
+                <span class="today"></span>
+                <div class="id_box">
+                    <span class="odd">身分證末碼為 <span>1,3,5,7,9</span>可購買</span>
+                    <span class="even">身分證末碼為 <span>2,4,6,8,0</span>可購買</span>
+                </div>
+            </div>
+            <select name="area" id="area" class="jsData">
+                
+            </select>
+        </div>
+        <div class="list jsData"></div>
+    </div>
+    
+    <!--地圖套件-->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <!--效能優化套件-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script> 
+    <script src="js/all.js"></script>
+    
+</body>
+</html>
