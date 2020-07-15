@@ -153,11 +153,25 @@ var greenIcon = new L.Icon({
   popupAnchor: [1, -34],
   shadowSize: [41, 41]
 });
+var redIcon = new L.Icon({
+    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
 
 //json檔案
 function coordinate(){
     var data = _data.features;
     for(let i =0;data.length>i;i++){
+        var mask;
+        if(data[i].properties.mask_adult == 0){
+            mask = redIcon;
+        }else{
+            mask = greenIcon;
+        } 
         markers.addLayer(L.marker([data[i].geometry.coordinates[1],data[i].geometry.coordinates[0]], {icon: greenIcon})
         .bindPopup('<div class="item"><div class="title_c">'+ data[i].properties.name +'</div><div class="info"><div class="area_c row">'+ data[i].properties.address +'</div><div class="tel_c row">'+ data[i].properties.phone +'</div><div class="open_c row">'+ data[i].properties.note +'</div></div><div class="num_box"><div class="adult"><span>成人口罩</span><span>'+ data[i].properties.mask_adult +'</span></div><div class="child"><span>兒童口罩</span><span>'+ data[i].properties.mask_child +'</span></div></div></div>'));
     }
