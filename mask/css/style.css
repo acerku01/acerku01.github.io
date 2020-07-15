@@ -77,11 +77,16 @@ select{
     height: 40px;
     font-size: 18px;
     margin: 15px 0 10px;
+    background: #fff;
+}
+.list_layout{
+    position: relative;
+    height: calc(100% - 130px);
+    background: #fff;
 }
 .list{
-    height: calc(100% - 130px);
-    overflow: auto;
-    background: #fff;
+    height: 100%;
+    overflow-y: auto;
 }
 .list .item{
     padding: 10px;
@@ -128,7 +133,7 @@ select{
 .close_btn{
     height: 80px;
     position: absolute;
-    top: 130px;
+    top: 0;
     right: -35px;
     background: #73c0d8;
     border-radius: 10px;
@@ -195,5 +200,23 @@ select{
 @media only screen and (max-width: 1023px){
     .fix_box{
         max-width: 100%;
+        min-width: 100%;
+        left: -100%;
+    }
+    .fix_box.open .close_btn{
+        right: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .title{
+        width: 35%;
+        align-self: center;
+        font-size: 26px;
+    }
+    .day_info{
+        width: 65%;
+        text-align: right;
     }
 }
