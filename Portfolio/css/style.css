@@ -1,0 +1,259 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: '微軟正黑體';
+}
+.content{
+    width: 673px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.headbg{
+    background: #424242;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.logo{
+    width: 117px;
+    float: left;
+    margin-right: 97px;
+}
+.text{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 18px;
+    color: #FFD366;
+    width: 303px;
+    float: left;
+}
+.text > div{
+    width: 100%;
+    float: left;
+}
+.text > div:nth-child(1){
+    margin-bottom: 23px;
+}
+.text > div span{
+    display:block;
+    margin-bottom: 7px;
+}
+.text input{
+    background: rgba(255,255,255,0.18);
+    border: 2px solid #FFD366;
+    border-radius: 10px;
+    font-size: 24px;
+    color: rgba(255,255,255,0.50);
+    font-family: '微軟正黑體';
+    padding: 8px 16px; 
+    width: 214px;
+    height: 20px;  
+    outline: 0px; 
+}
+::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.50);
+}
+.showbtn{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background: #FFD366;
+    font-size: 24px;
+    color: #424242;
+    text-align: center;
+    line-height: 120px;
+    float: left;
+}
+.showbtn:hover{
+    cursor: pointer;
+    background: #FFD366;
+    box-shadow: 0 1px 6px 3px rgba(255,195,49,0.64);
+}
+.showbtn:active{
+    background: #DEA921;
+}
+.center{
+    background: #f3f3f3;
+    width: 100%;
+    float: left;
+    padding: 48px 0;
+}
+.list{
+    width: 624px;
+    margin: 0 auto;
+}
+h1{
+    margin: 0px auto 36px;
+    font-size: 24px;
+    color: #424242;
+    text-align: center;
+}
+.footer{
+    width: 100%;
+    height: 90px;
+    background: #FFD366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer img{
+    width: 55px;
+    height: 55px;
+}
+.show{
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    padding: 21px 12px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: #4A4A4A;
+    font-weight: 600;
+}
+.level-1{
+    border-left: 7px solid #86D73F;
+}
+.level-2{
+    border-left: 7px solid #31BAF9;
+}
+.level-3{
+    border-left: 7px solid #FF982D;
+}
+.level-4{
+    border-left: 7px solid #FF6C02;
+}
+.level-5{
+    border-left: 7px solid #FF1200;
+}
+.level-1-c{
+    border: 6px solid #86D73F;
+    color: #86D73F;
+}
+.level-2-c{
+    border: 6px solid #31BAF9;
+    color: #31BAF9;
+}
+.level-3-c{
+    border:6px solid #FF982D ;
+    color: #FF982D;
+}
+.level-4-c{
+    border: 6px solid #FF6C02;
+    color: #FF6C02;
+}
+.level-5-c{
+    border:6px solid #FF1200 ;
+    color: #FF1200;
+}
+.level-1-c .reset{
+    background: #86D73F;
+}
+.level-2-c .reset{
+    background: #31BAF9;
+}
+.level-3-c .reset{
+    background: #FF982D;
+}
+.level-4-c .reset{
+    background: #FF6C02;
+}
+.level-5-c .reset{
+    background: #FF1200;
+}
+.show span{
+    font-size: 12px;
+    color: #424242;
+    margin-right: 7px;
+    font-weight: 400;
+}
+.show > div{
+    align-items: center;
+    display: flex;
+}
+.show > a+ div{
+    width: 80px;
+}
+.show > div:last-child{
+    font-size: 12px;
+    color: #424242;
+}
+.delete{
+    position: absolute;
+    right: 0;
+    background: #f34e4e;
+    width: 0px;
+    height: 69px;
+    color: #fff;
+    text-align: center;
+    line-height: 69px;
+    text-decoration: none;
+    -webkit-transition: width 1s;
+    transition: width 1s;
+}
+.show:hover .delete{
+    width: 100px;
+    cursor: pointer;
+}
+.showall{
+    position: relative;
+    width: 108px;
+    height: 108px;
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    font-size: 32px;
+}
+.showall span{
+    width: 100%;
+}
+.showall >span+span{
+    font-size: 14px;
+}
+.button{
+    position: relative;
+}
+.reset{
+    position: absolute;
+    bottom: 0px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 25px;
+    border: 3px solid #424242;
+}
+.reset:hover{
+    box-shadow: 0 1px 6px 1px rgb(0, 0, 0);
+}
+.finaltext{
+    position: absolute;
+    right: -145px;
+    text-align: left;
+    width: 128px !important;
+    top: 30px;
+}
+.final{
+    display: none;
+}
+.final.active{
+    display: block;
+}
+.final + .showbtn{
+    display: block;
+}
+.final.active + .showbtn{
+    display: none;
+}
