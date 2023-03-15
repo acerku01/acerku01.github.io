@@ -53,7 +53,7 @@
   },
   {
     "title":"下載訂購單",
-    "href":"/file/order_form.pdf",
+    "href":"/./file/order_form.pdf",
     "otherLink":true,
     "isOpen":false
   }
